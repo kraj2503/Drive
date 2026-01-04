@@ -1,20 +1,22 @@
 {
-  "name": "docs",
+  "name": "Router",
   "version": "0.1.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint --max-warnings 0",
-    "check-types": "next typegen && tsc --noEmit"
+    "dev": "bun --watch app/index.ts",
+    "start": "bun index.ts",
+    "build": "bunx tsc",
+    "check-types": "bunx tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "*",
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
     "next": "16.1.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "zip-a-folder": "^4.0.4"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
